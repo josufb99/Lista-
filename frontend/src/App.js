@@ -50,7 +50,7 @@ function App() {
     setTasks(updatedTasks);
   };
 
-  // Eliminar las tareas que están marcadas como completadas
+  
   const clearCompletedTasks = () => {
     const remainingTasks = tasks.filter((task) => !task.completed);
     setTasks(remainingTasks);
@@ -75,13 +75,13 @@ function App() {
           <option value="normal">Normal</option>
           <option value="importante">Importante</option>
         </select>
-        <button type="submit">Añadir Tarea</button>
+        <button type="submit">✅</button>
       </form>
 
       <TaskList tasks={tasks} toggleTaskCompletion={toggleTaskCompletion} />
 
       <button className="clear-btn" onClick={clearCompletedTasks}>
-        Eliminar Tareas Completadas
+       Borrar
       </button>
     </div>
   );
